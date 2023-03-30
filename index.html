@@ -4,52 +4,62 @@
     <title>Holly Niquette's Portfolio</title>
     <meta name="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <header>
-    <nav>
-      <h1>Holly Niquette</h1>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#links">Links</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <nav>
+        <h1>Holly Niquette</h1>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <body>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>kjlhun.kjnlkbljkhblhj</p>
-      <img
-        src="./Assets/murphy-01.jpg"
-        alt="Murphy 2"
-        width="300"
-        height="300"
-      />
-    </section>
-    <section id="work">
-      <h2>Work</h2>
-      <img
-        src="./Assets/murphy-02.jpg"
-        alt="Murphy 2"
-        width="300"
-        height="300"
-      />
-      <img
-        src="./Assets/murphy-03.jpg"
-        alt="Murphy 3"
-        width="300"
-        height="300"
-      />
-    </section>
-    <section id="links">
-      <h2>Links</h2>
-      <ul>
-        <li>Resume</li>
-        <li><a href="mailto:hollyniquette@gmail.com">Email</a></li>
-      </ul>
-    </section>
-  </body>
+    <body>
+      <div class="sidebar">
+        <h2 class="sidebar-about-me">About Me</h2>
+        <h2 class="sidebar-work">Work</h2>
+        <h2 class="sidebar-links">Links</h2>
+      </div>
+      <div class="main">
+        <section id="about">
+          <p>kjlhun.kjnlkbljkhblhj</p>
+          <img
+            src="./Assets/murphy-01.jpg"
+            alt="Murphy 2"
+            width="300"
+            height="300"
+          />
+        </section>
+        <section id="work">
+          <img
+            src="./Assets/murphy-02.jpg"
+            alt="Murphy 2"
+            width="300"
+            height="300"
+          />
+          <img
+            src="./Assets/murphy-03.jpg"
+            alt="Murphy 3"
+            width="300"
+            height="300"
+          />
+        </section>
+        <section id="links">
+          <ul>
+            <li>Resume</li>
+            <li><a href="mailto:hollyniquette@gmail.com">Email</a></li>
+          </ul>
+        </section>
+      </div>
+    </body>
+  </div>
 </html>
