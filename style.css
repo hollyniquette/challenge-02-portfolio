@@ -1,17 +1,27 @@
+/*
+  using CSS Grid for site structure,
+  https://css-tricks.com/snippets/css/complete-guide-grid/
+*/
 .container {
   max-width: 80%;
   margin-right: auto;
   margin-left: auto;
   font-family: Raleway;
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 100px 500px 500px 200px 100px;
-  grid-template-areas: 'header header' 'sidebar main' 'sidebar main' 'sidebar main' 'footer footer';
+  grid-template:
+    [header] 'header header' 100px
+    [about-me] 'sidebar main' 400px
+    [work] 'sidebar main' 400px
+    [resume] 'sidebar main' 800px
+    [links] 'sidebar main' 200px
+    [footer] 'footer footer' 100px
+    / 20% 80%;
 }
 
 header {
   width: 100%;
-  grid-area: header;
+  grid-column: 1 / -1;
+  grid-row: header;
 }
 
 header h1 {
@@ -37,11 +47,54 @@ nav ul li {
   font-size: 1.2rem;
 }
 
-nav ul li a {
+a {
   text-decoration: none;
   color: white;
 }
 
-.sidebar {
-  grid-area: sidebar;
+.sidebar-about-me {
+  grid-column: sidebar;
+  grid-row: about-me;
+}
+
+.main-about-me {
+  grid-column: main;
+  grid-row: about-me;
+  display: flex;
+}
+
+.main-about-me-img {
+  float: left;
+  padding: 20px;
+}
+
+.main-about-me-text {
+  padding: 20px 20px 20px 0;
+  overflow-wrap: normal;
+  word-break: break-all;
+}
+
+.sidebar-work {
+  grid-column: sidebar;
+  grid-row: work;
+}
+
+.main-work {
+  grid-column: main;
+  grid-row: work;
+}
+
+.sidebar-resume {
+  grid-column: sidebar;
+  grid-row: resume;
+}
+
+.sidebar-links {
+  grid-column: sidebar;
+  grid-row: links;
+}
+
+.main-links {
+  grid-column: main;
+  grid-row: links;
 }
