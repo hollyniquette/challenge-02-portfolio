@@ -1,5 +1,5 @@
 /*
-  using CSS Grid for site structure,
+  using CSS Grid for site structure and responsiveness,
   https://css-tricks.com/snippets/css/complete-guide-grid/
 */
 .container {
@@ -15,7 +15,7 @@
     [resume] 'sidebar main' 800px
     [links] 'sidebar main' 200px
     [footer] 'footer footer' 100px
-    / 20% 80%;
+    / 17% 83%;
 }
 
 header {
@@ -43,11 +43,11 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline;
-  margin: 0px 100px 0px 0px;
-  font-size: 1.2rem;
+  margin: 0px 80px 0px 0px;
+  font-size: 1.3rem;
 }
 
-a {
+header a {
   text-decoration: none;
   color: white;
 }
@@ -55,6 +55,8 @@ a {
 .sidebar-about-me {
   grid-column: sidebar;
   grid-row: about-me;
+  text-align: right;
+  padding: 20px 50px;
 }
 
 .main-about-me {
@@ -69,14 +71,17 @@ a {
 }
 
 .main-about-me-text {
-  padding: 20px 20px 20px 0;
+  padding: 20px 50px 20px 0;
+  font-size: 1.2rem;
   overflow-wrap: normal;
-  word-break: break-all;
+  overflow-y: scroll;
 }
 
 .sidebar-work {
   grid-column: sidebar;
   grid-row: work;
+  text-align: right;
+  padding: 20px 50px;
 }
 
 .main-work {
@@ -84,14 +89,22 @@ a {
   grid-row: work;
 }
 
+.main-work img {
+  padding: 20px;
+}
+
 .sidebar-resume {
   grid-column: sidebar;
   grid-row: resume;
+  text-align: right;
+  padding: 20px 50px;
 }
 
 .sidebar-links {
   grid-column: sidebar;
   grid-row: links;
+  text-align: right;
+  padding: 20px 50px;
 }
 
 .main-links {
